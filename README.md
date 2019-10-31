@@ -16,7 +16,7 @@ The participants download these parameters, run a computation to produce new par
 
 - Install Rust and Cargo following the instructions [here](https://www.rust-lang.org/tools/install)
 - Make sure you have [python 3](https://www.python.org/downloads/) installed
-- Make a [keybase](https://keybase.io/) account and link it to twitter/github/... so people can be sure it's actually you that participated. Install the [desktop software](https://keybase.io/download) which wil be used to sign the attestation.
+- Make a [keybase](https://keybase.io/) account and link it to your twitter/github/... so people can be sure it's actually you that participated. Install the [desktop software](https://keybase.io/download) which wil be used to sign the attestation.
 
 Download and compile the required source code:
 
@@ -67,7 +67,7 @@ Also please fill out 'attestation.txt' and sign it by running 'python3 sign_atte
 
 Upload the generated `loopring_mpc_nnnn.zip` file to the server (the coordinator will send instructions on how to do this). For example, if you're participant 4 you will need to upload the file `loopring_mpc_0004.zip`.
 
-Document the process you used and add it to `attestation.txt` (DO NOT CREATE THIS FILE, this file will have been auto-generated and will already contain important text!), following the template here: https://github.com/weijiekoh/perpetualpowersoftau/tree/master/0001_weijie_response.
+Document the process you used and add it to `attestation.txt` (DO NOT CREATE THIS FILE, this file will have been auto-generated and will already contain important data!), following the template here: https://github.com/weijiekoh/perpetualpowersoftau/tree/master/0001_weijie_response.
 
 Sign it with your keybase GPG key by running
 
@@ -101,13 +101,25 @@ Stay in the folder `phase2-bn254/loopring` from now on to run all commands.
 
 Download the response of the latest participant from [phase 1](https://github.com/weijiekoh/perpetualpowersoftau/) into `phase2-bn254/loopring`. Rename the file to `response`.
 
-Run the following commands (TODO: beacon etc... There seems to be a problem here when using a response from phase 1 for some reason...)
+A final contribution is needed with a [beacon](https://github.com/ZcashFoundation/powersoftau-attestations/tree/master/0088). To do this a bitcoin hash is used at a certain block height. Publicly share the block height of the block you will use a couple of hours before the block is mined. Once the block is mined put the hash of the block in `phase2-bn254/powersoftau/src/bin/beacon_constrained.rs`:
 
 ```
+// Update the number of iterations: Sapling MPC did 2^42 iterations
+
+// Place block hash here (block number #564321)
+let mut cur_hash: [u8; 32] = hex!("0000000000000000000a558a61ddc8ee4e488d647a747fe4dcc362fe2026c620");
+```
+
+Recompile with `cargo build --release` in `phase2-bn254/powersoftau` and now run this:
+
+```bash
+../powersoftau/target/release/verify_transform_constrained -skipverification && \
+mv new_challenge challenge && mv response old_response && \
+../powersoftau/target/release/beacon_constrained && \
 ../powersoftau/target/release/prepare_phase2
 ```
 
-We're now ready to setup phase 2. Open `config.py` and modify `circuit_permutations` with all the circuits that are needed. Once you've done this, create a new branch for the `phase2-bn254` repo and commit your changes to that branch. Make sure all participants checkout that branch when participating.
+We're now ready to setup phase 2. Open `config.py` and modify `circuits` with all the circuits that are needed. Once you've done this, create a new branch for the `phase2-bn254` repo and commit your changes to that branch. Make sure all participants checkout that branch when participating.
 
 We can now create the initial parameters:
 
@@ -122,7 +134,24 @@ At this point an indefinite number of participants can contribute. For every par
 - Check if the signed attestation is indeed signed by the paricipant (can easily be checked on the website of keybase).
 - Update the website/github with the attestation file and the sha256 hash of the contribution file. This allows the new participant to check if he is indeed building upon the correct contribution.
 
-Once enough participants have contributed we can finally create our verification and proving keys!
+At any point we can use the parameters to create the verification and proving keys.
+
+If you decide to use a certain contribution, you first have to do another contribution on top of it with [a beacon](https://lists.zfnd.org/pipermail/zapps-wg/2018/000380.html) (just like before with the phase 1 result). To do this a bitcoin hash is used at a certain block height. Publicly share the block height of the block you will use a couple of hours before the block is mined. Once the block is mined put the hash of the block in `phase2-bn254/phase2/src/bin/beacon.rs`:
+
+```
+// Update the number of iterations: Sapling MPC did 2^42 iterations
+
+// Place block hash here (block number #564321)
+let mut cur_hash: [u8; 32] = hex!("0000000000000000000a558a61ddc8ee4e488d647a747fe4dcc362fe2026c620");
+```
+
+Recompile with `cargo build --release` in `phase2-bn254/phase2` and now contribute like this:
+
+```
+python3 contribute.py beacon
+```
+
+This will generate the contribution that can finally be used to create the verification and proving keys!
 
 ```
 python3 export_keys.py
