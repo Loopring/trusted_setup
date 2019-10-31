@@ -16,7 +16,7 @@ The participants download these parameters, run a computation to produce new par
 
 - Install Rust and Cargo following the instructions [here](https://www.rust-lang.org/tools/install)
 - Make sure you have [python 3](https://www.python.org/downloads/) installed
-- Make a [keybase](https://keybase.io/) account and link it twitter/github/... so people can be sure it's actually you that participated. Install the [desktop software](https://keybase.io/download) which wil be used to sign the attestation.
+- Make a [keybase](https://keybase.io/) account and link it to twitter/github/... so people can be sure it's actually you that participated. Install the [desktop software](https://keybase.io/download) which wil be used to sign the attestation.
 
 Download and compile the required source code:
 
@@ -27,9 +27,9 @@ cargo build --release && \
 cd ../loopring
 ```
 
-Stay in this folder from this point on. `phase2-bn254/loopring` needs to be the directoy you run all scripts in.
+Stay in this folder from this point on. `phase2-bn254/loopring` needs to be the directory you run all scripts in.
 
-Download the `loopring_mpc_nnnn.zip` file from the coordinator to `phase2-bn254/loopring` (the coordinator will send you the link). For example, if you're participant 4 you will need to download the file `loopring_mpc_0003.zip`.
+Download the `loopring_mpc_nnnn.zip` file from the server to `phase2-bn254/loopring` (the coordinator will send you the link). For example, if you're participant 4 you will need to download the file `loopring_mpc_0003.zip` (i.e. the contribution of the previous participant).
 
 Run the computation:
 
@@ -52,9 +52,9 @@ After a short while you will see something like this:
 Starting from contribution 1 with sha256 hash 0xdd8dd76af5af768bda1b407943b2e478d6da6d663657a376a8db0403c6424825 (please check if this is correct)
 ```
 
-Make sure the hash that is shown is indeed the hash of the contribution you've downloaded and need to build upon (which is the hash of the contributoin of the previous participant).
+Make sure the hash that is shown is indeed the hash of the contribution you've downloaded and need to build upon (which is the hash of the contribution of the previous participant).
 
-The compuation will run for about 24 hours on a fast machine. Please try your best to avoid electronic surveillance or tampering during this time.
+The computation will run for about 24 hours on a fast machine. Please try your best to avoid electronic surveillance or tampering during this time.
 
 When it is done, you will see something like this:
 
@@ -67,7 +67,7 @@ Also please fill out 'attestation.txt' and sign it by running 'python3 sign_atte
 
 Upload the generated `loopring_mpc_nnnn.zip` file to the server (the coordinator will send instructions on how to do this). For example, if you're participant 4 you will need to upload the file `loopring_mpc_0004.zip`.
 
-Document the process you used and add it to `attestation.txt` (this file will have been auto-generated), following the template here: https://github.com/weijiekoh/perpetualpowersoftau/tree/master/0001_weijie_response.
+Document the process you used and add it to `attestation.txt` (DO NOT CREATE THIS FILE, this file will have been auto-generated and will already contain important text!), following the template here: https://github.com/weijiekoh/perpetualpowersoftau/tree/master/0001_weijie_response.
 
 Sign it with your keybase GPG key by running
 
@@ -87,7 +87,7 @@ Clone the following repo's in the same folder
 - https://github.com/Loopring/protocols (branch mpc)
 - https://github.com/LoopringSecondary/phase2-bn254
 
-Go into the `protocols/packages/loopring_v3` and follow the build instructions to build the circuits.
+Go into `protocols/packages/loopring_v3` and follow the build instructions to build the circuits.
 
 Next, go into `phase2-bn254` and build the rust programs:
 
