@@ -107,7 +107,7 @@ Run the following commands (TODO: beacon)
 ../powersoftau/target/release/prepare_phase2
 ```
 
-We're now ready to setup phase 2. Open `config.py` and modify `circuit_permutations` with all the circuits that are needed. Once you've done this, create a new branch for the `phase2-bn254` repo and commit your changes to that branch. From now on, make sure all participants checkout that branch when participating.
+We're now ready to setup phase 2. Open `config.py` and modify `circuit_permutations` with all the circuits that are needed. Once you've done this, create a new branch for the `phase2-bn254` repo and commit your changes to that branch. Make sure all participants checkout that branch when participating.
 
 We can now create the initial parameters:
 
@@ -117,12 +117,9 @@ python3 setup.py
 
 Depending on the number of circuits this can take a very long time. Once finished the file `loopring_mpc_0000.zip` will have been created with the initial parameters for all circuits. Upload it to the server so the first participant can download it.
 
-At this point an indefinite number of participants can contribute.
-
-For every participant the coordinator needs to do a couple of things:
-
-- Check if the `loopring_mpc_NNNN.zip` file a participant has sent is correct. This can be done by executing `python3 verify_contribution.py X` where `X` is the index of the participation to check. This check also needs to particaption file `X-1`.
-- Check if the signed attestation is indeed signed by the paricipant (can easily be checked on the website of keybase)
+At this point an indefinite number of participants can contribute. For every participant the coordinator needs to do a couple of things:
+- Check if the `loopring_mpc_NNNN.zip` file a participant has sent is correct. This can be done by executing `python3 verify_contribution.py X` where `X` is the index of the contribution to check. This check also needs contribution file `X-1`.
+- Check if the signed attestation is indeed signed by the paricipant (can easily be checked on the website of keybase).
 - Update the website/github with the attestation file and the sha256 hash of the contribution file. This allows the new participant to check if he is indeed building upon the correct contribution.
 
 Once enough participants have contributed we can finally create our verification and proving keys!
@@ -131,7 +128,7 @@ Once enough participants have contributed we can finally create our verification
 python3 export_keys.py
 ```
 
-This will write the keys to `protocols/packages/loopring_v3/keys`.
+This will use the latest `loopring_mpc_NNNN.zip` file it can find and write the keys to `protocols/packages/loopring_v3/keys`.
 
 ## Examples of entropy sources
 
