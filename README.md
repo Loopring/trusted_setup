@@ -101,7 +101,7 @@ Stay in the folder `phase2-bn254/loopring` from now on to run all commands.
 
 Download the response of the latest participant from [phase 1](https://github.com/weijiekoh/perpetualpowersoftau/) into `phase2-bn254/loopring`. Rename the file to `response`.
 
-Run the following commands (TODO: beacon)
+Run the following commands (TODO: beacon etc... There seems to be a problem here when using a response from phase 1 for some reason...)
 
 ```
 ../powersoftau/target/release/prepare_phase2
