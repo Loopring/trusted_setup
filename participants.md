@@ -8,6 +8,9 @@
 1. Using your Keybase software, join a team called **loopringceremony**, this is the official communication channel, but we'll also collect another IM account of yours to inform you when your trun is coming up.
 
 ## When Your Turn Comes
+
+### Step#1
+
 Download and compile the required source code:
 
 ```bash
@@ -19,7 +22,11 @@ cd ../loopring
 
 Stay in this folder from this point on. `phase2-bn254/loopring` needs to be the directory you run all scripts in.
 
+### Step#2
+
 Download the `loopring_mpc_nnnn.zip` file from the server to `phase2-bn254/loopring` (the coordinator will send you the link). For example, if you're participant 4 you will need to download the file `loopring_mpc_0003.zip` (i.e. the contribution of the previous participant).
+
+### Setp#3
 
 Run the computation:
 
@@ -46,6 +53,7 @@ Make sure the hash that is shown is indeed the hash of the contribution you've d
 
 The computation will run for about 24 hours on a fast machine. Please try your best to avoid electronic surveillance or tampering during this time.
 
+### Step#4
 When it is done, you will see something like this:
 
 ```
@@ -57,6 +65,8 @@ Also please fill out 'attestation.txt' and sign it by running 'python3 sign_atte
 
 Upload the generated `loopring_mpc_nnnn.zip` file to the server (the coordinator will send instructions on how to do this). For example, if you're participant 4 you will need to upload the file `loopring_mpc_0004.zip`.
 
+### Step#5
+
 Document the process you used and add it to `attestation.txt` (DO NOT CREATE THIS FILE, this file will have been auto-generated and will already contain important data!), following the template here: https://github.com/weijiekoh/perpetualpowersoftau/tree/master/0001_weijie_response.
 
 Sign it with your keybase GPG key by running
@@ -66,6 +76,9 @@ python3 sign_attestation.py
 ```
 
 This will generate the file `signed_attestation.txt`. Send this file to the coordinator.
+
+### Step#6
+Reboot your computer.
 
 ## Examples of Entropy Sources
 
