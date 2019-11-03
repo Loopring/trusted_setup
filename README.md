@@ -1,8 +1,6 @@
 # Loopring ZKP Trusted Setup Multi-party Computation Ceremony
 
-We use a very similar method of contributing as in [phase 1](https://github.com/weijiekoh/perpetualpowersoftau/) of the ceremony.
-
-As long as one party in the ceremony behaves honestly and is not comprimised, the entire setup is trustworthy.
+We use a very similar method of contributing as in [phase 1](https://github.com/weijiekoh/perpetualpowersoftau/) of the ceremony. As long as one party in the ceremony behaves honestly and is not comprimised, the entire setup is trustworthy.
 
 ## Ceremony progress
 
@@ -16,7 +14,7 @@ The participants download these parameters, run a computation to produce new par
 
 - Install Rust and Cargo following the instructions [here](https://www.rust-lang.org/tools/install)
 - Make sure you have [python 3](https://www.python.org/downloads/) installed
-- Make a [keybase](https://keybase.io/) account and link it to your twitter/github/... so people can be sure it's actually you that participated. Install the [desktop software](https://keybase.io/download) which wil be used to sign the attestation.
+- Make a [keybase](https://keybase.io/) account and [link it to your twitter/github/username](https://github.com/pstadler/keybase-gpg-github) so people can be sure it's actually you that participated. Install the [desktop software](https://keybase.io/download) which wil be used to sign the attestation.
 
 Download and compile the required source code:
 
