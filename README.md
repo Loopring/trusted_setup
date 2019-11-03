@@ -100,7 +100,7 @@ Stay in the folder `phase2-bn254/loopring` from now on to run all commands.
 
 Download the response of the latest participant from [phase 1](https://github.com/weijiekoh/perpetualpowersoftau/) into `phase2-bn254/loopring`. Rename the file to `response`.
 
-A final contribution is needed with a [beacon](https://github.com/ZcashFoundation/powersoftau-attestations/tree/master/0088). To do this a bitcoin hash is used at a certain block height. Publicly share the block height of the block you will use a couple of hours before the block is mined. Once the block is mined put the hash of the block in `phase2-bn254/powersoftau/src/bin/beacon_constrained.rs`:
+A final contribution is needed with a [beacon](https://github.com/ZcashFoundation/powersoftau-attestations/tree/master/0088). The beacon we use is the hash of Bitcoin block #602168: `00000000000000000013a0dab9d26be0353108f6eb5a2be6ac389986296607c7`, which can be found in `phase2-bn254/powersoftau/src/bin/beacon_constrained.rs`:
 
 ```
 // Update the number of iterations: Sapling MPC did 2^42 iterations
