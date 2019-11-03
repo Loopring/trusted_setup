@@ -1,6 +1,6 @@
 # Instructions for Participants
 
-## Get Ready Before the Participation
+## Get Ready Before Your Participation
 
 1. Install Rust and Cargo following the instructions [here](https://www.rust-lang.org/tools/install)
 1. Make sure you have [python 3](https://www.python.org/downloads/) installed
