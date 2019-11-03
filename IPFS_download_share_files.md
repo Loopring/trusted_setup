@@ -31,18 +31,14 @@ ipfs cat QmY7hamBERCe9aAE2UoJQre9BJDug7r4Dcomjpu9ybkacc > FOO.data
 To allow another person to grab a file you have through IPFS, you need to add it to IPFS first:
 
 ```
-ipfs add BAR.data
+ipfs add --pin BAR.data
 ```
 The command will output something like the following:
 
 ```
 added QmbFMke1KXqnYyBBWxB74N4c5SBnJMVAiMNRcGu6x1AwQH BAR.data
 ```
-where `QmbFMke1KXqnYyBBWxB74N4c5SBnJMVAiMNRcGu6x1AwQH` is the CID of `BAR.data`. Then you run:
-
-```
-ipfs pin QmbFMke1KXqnYyBBWxB74N4c5SBnJMVAiMNRcGu6x1AwQH
-```
+where `QmbFMke1KXqnYyBBWxB74N4c5SBnJMVAiMNRcGu6x1AwQH` is the CID of `BAR.data`.
 
 Then you can share the IPFS files and their origin file names to the other party:
 
