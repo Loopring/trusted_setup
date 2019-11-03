@@ -12,9 +12,10 @@ The participants download these parameters, run a computation to produce new par
 
 ## Instructions for participants
 
-- Install Rust and Cargo following the instructions [here](https://www.rust-lang.org/tools/install)
-- Make sure you have [python 3](https://www.python.org/downloads/) installed
-- Make a [keybase](https://keybase.io/) account and [link it to your twitter/github/username](https://github.com/pstadler/keybase-gpg-github) so people can be sure it's actually you that participated. Install the [desktop software](https://keybase.io/download) which wil be used to sign the attestation.
+1. Install Rust and Cargo following the instructions [here](https://www.rust-lang.org/tools/install)
+1. Make sure you have [python 3](https://www.python.org/downloads/) installed
+1. Make a [Keybase](https://keybase.io/) account and [link it to your twitter/github/username](https://github.com/pstadler/keybase-gpg-github) so people can be sure it's actually you that participated. Install the [desktop software](https://keybase.io/download) which wil be used to sign the attestation.
+1. Using your Keybase software, join a team called **loopringceremony**, this is the official communication channel, but we'll also collect another IM account of yours to inform you when your trun is coming up.
 
 Download and compile the required source code:
 
@@ -81,9 +82,9 @@ This will generate the file `signed_attestation.txt`. Send this file to the coor
 - Make sure you have [python 3](https://www.python.org/downloads/) installed
 
 Clone the following repo's in the same folder
-- https://github.com/Loopring/protocol3-circuits (branch mpc)
-- https://github.com/Loopring/protocols (branch mpc)
-- https://github.com/LoopringSecondary/phase2-bn254
+- https://github.com/Loopring/protocol3-circuits (master branch)
+- https://github.com/Loopring/protocols (master branch)
+- https://github.com/LoopringSecondary/phase2-bn254 (master branch)
 
 Go into `protocols/packages/loopring_v3` and follow the build instructions to build the circuits.
 
