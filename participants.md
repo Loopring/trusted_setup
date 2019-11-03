@@ -43,6 +43,16 @@ Type some random text and press [ENTER] to provide additional entropy...
 
 Enter some random text as prompted. You should try to provide as much entropy as possible from sources which are truly hard to replicate. See below for examples derived from Zcash's own ceremony.
 
+> Examples of Entropy Sources
+>
+> 1. `/dev/urandom` from one or more devices
+> 3. The most recent Bitcoin block hash
+> 2. Randomly mashing keys on the keyboard
+> 5. Asking random people on the street for numbers
+> 6. Geiger readings of radioactive material. e.g. a radioactive object, which can be anything from a [banana](https://en.wikipedia.org/wiki/Banana_equivalent_dose) to a [Chernobyl fragment](https://www.vice.com/en_us/article/gy8yn7/power-tau-zcash-radioactive-toxic-waste).
+> 7. Environmental data (e.g. the weather, seismic activity, or readings from the sun)
+
+
 After a short while you will see something like this:
 
 ```
@@ -80,11 +90,3 @@ This will generate the file `signed_attestation.txt`. Send this file to the coor
 ### Step#6
 Reboot your computer.
 
-## Examples of Entropy Sources
-
-1. `/dev/urandom` from one or more devices
-3. The most recent Bitcoin block hash
-2. Randomly mashing keys on the keyboard
-5. Asking random people on the street for numbers
-6. Geiger readings of radioactive material. e.g. a radioactive object, which can be anything from a [banana](https://en.wikipedia.org/wiki/Banana_equivalent_dose) to a [Chernobyl fragment](https://www.vice.com/en_us/article/gy8yn7/power-tau-zcash-radioactive-toxic-waste).
-7. Environmental data (e.g. the weather, seismic activity, or readings from the sun)
