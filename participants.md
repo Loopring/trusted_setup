@@ -4,7 +4,7 @@
 
 1. Install Rust and Cargo following the instructions [here](https://www.rust-lang.org/tools/install)
 1. Make sure you have [python 3](https://www.python.org/downloads/) installed
-1. Make a [Keybase](https://keybase.io/) account and [link it to your twitter/github/username](https://github.com/pstadler/keybase-gpg-github) so people can be sure it's actually you that participated. Install the [desktop software](https://keybase.io/download) which wil be used to sign the attestation.
+1. Make a [Keybase](https://keybase.io/) account and [link it to your twitter or github account](https://github.com/pstadler/keybase-gpg-github) so people can be sure it's actually you that participated. Install the [desktop software](https://keybase.io/download) which wil be used to sign the attestation.
 1. Using your Keybase software, join a team called **loopringceremony**, this is the official communication channel, but we'll also collect another IM account of yours to inform you when your trun is coming up.
 
 ## When Your Turn Comes
