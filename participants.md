@@ -67,7 +67,7 @@ python3 sign_attestation.py
 
 This will generate the file `signed_attestation.txt`. Send this file to the coordinator.
 
-## Examples of entropy sources
+## Examples of Entropy Sources
 
 1. `/dev/urandom` from one or more devices
 3. The most recent Bitcoin block hash
