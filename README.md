@@ -15,4 +15,4 @@ The participants download these parameters, run a computation to produce new par
 ## Instructions
 
 - The coordinators shall follow [these instructions](./coordinator.md).
-- All participants please follow [these instructions](./participants.md).
+- All participants please follow [these instructions](./participants.md). Note that for all participants: **please join our Keybase team by following the instructions inside the *Get Ready for Participation* section BEFORE your turn comes up**.
