@@ -13,7 +13,7 @@
 
 Download and compile the required source code:
 
-```bash
+```console
 git clone https://github.com/LoopringSecondary/phase2-bn254 --branch master && \
 cd phase2-bn254/phase2 && \
 cargo build --release && \
@@ -30,7 +30,7 @@ Download the `loopring_mpc_nnnn.zip` file from the server to `phase2-bn254/loopr
 
 Run the computation:
 
-```
+```console
 python3 contribute.py
 ```
 
@@ -85,7 +85,7 @@ Document the process you used and add it to `attestation.txt` (DO NOT CREATE THI
 
 Sign it with your keybase GPG key by running
 
-```
+```console
 python3 sign_attestation.py
 ```
 
@@ -93,18 +93,18 @@ This will generate the file `signed_attestation.txt`.
 
 ### Step#7
 Now you will share your files with the coordinator using IPFS. If you have IPFS already installed, please run:
-```
+```console
 ipfs config --json Datastore.StorageMax '"200GB"'
 ```
 This is to make sure IPFS supports large files.
 
 Otherwise,  [download IPFS](https://dist.ipfs.io/#go-ipfs) then install it on your OS, then run:
-```
+```console
 ipfs init
 ipfs config --json Datastore.StorageMax '"200GB"'
 ```
 Now run the following commands to share your contribution results (replacing `my_name` and `NNNN`):
-```
+```console
 ipfs id >> my_name_contribution.txt
 ipfs add loopring_mpc_NNNN.zip >> my_name_contribution.txt
 ipfs add signed_attestation.txt >> my_name_contribution.txt
@@ -113,5 +113,9 @@ ipfs daemon
 You need to share the `my_name_summary.txt` file with the coordinator using the Keybase's chat, **while keep IPFS daemon up runing and also keep your computer from sleeping.** (It will to take the coordinator about 30 minutes to 1 hour to download all files.)
 
 ### Step#8
-Wait patiently unitl the coordinator confirmed all files have been retrieved. Then you can run: `ipfs repo gc` to release disk space and delete all code and files from disk.
+Wait patiently unitl the coordinator confirmed all files have been retrieved. Then you can run:
+```console
+ipfs repo gc
+```
+to release disk space and delete all code and files from disk.
 
