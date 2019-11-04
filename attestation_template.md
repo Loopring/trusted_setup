@@ -36,6 +36,7 @@ Ubuntu 18.04 hosted on a cloud machine somewhere in Southeast Asia.
         b37f376b 16aae752 f5491015 2b2307f4
         508d04b4 124d4e95 8c391d41 6dfc04a8
         2db73c84 f8aa87f3 ba652eec 7b18b407
+        
 **Entropy sources:** an opaque plastic dice cup with 5 dice. I perfomed multiple
 rolls and typed the numbers into the console, and also pasted in multiple
 invocations of:
