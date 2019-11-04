@@ -100,12 +100,12 @@ This will generate the file `signed_attestation.txt`.
 Now run the following commands to share your contribution results:
 ```console
 sftp -i sftp.credential loopring@sftp.loopring.org
-sftp> reput signed_attestation.txt signed_attestation_0004.txt
-sftp> reput loopring_mpc_0004.zip
+sftp> put signed_attestation.txt signed_attestation_0004.txt
+sftp> put loopring_mpc_0004.zip
 sftp> exit
 ```
 
-The file is very large (tens of Gigabytes),  it will take quite some time to upload. If the uploading is interrupted, simply repeat the above commands so it will resume uploading.
+The zip file is very large (tens of Gigabytes),  it will take quite some time to upload. If the uploading is interrupted, simply repeat the above commands but change `put` to `reput`
 
 ### Step#6
 **Reboot your computer**, then notify the coordinator that your have completed your contribution.
