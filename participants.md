@@ -27,19 +27,19 @@ Save the `sftp.credential` file shared by the coordinator in this directory. **S
 
 ### Step#2
 
-Download the contribution zip file from the previous participant. 
+Download the contribution zip file from the previous participant.
 
 ```console
 sftp -i sftp.credential loopring@sftp.loopring.org
 sftp> reget loopring_mpc_0003.zip
 sftp> exit
 ```
-Note that the sequence number in `loopring_mpc_0003.zip` must 1 smaller than yours (0004)。
+Note that the sequence number in `loopring_mpc_0003.zip` must be 1 smaller than yours (0004).
 
 The file is very large (tens of Gigabytes),  it will take quite some time to download. If the downloading is interrupted, simply repeat the above commands so it will resume downloading.
 
 
-### Setp#3
+### Step#3
 
 Run the computation:
 
@@ -69,7 +69,7 @@ Enter some random text as prompted. You should try to provide as much entropy as
 After a short while you will see something like this:
 
 ```
-Starting from contribution 3 with sha256 hash 0xdd8dd76af5af768bda1b407943b2e478d6da6d663657a376a8db0403c6424825 (please check if this is correct)
+Starting from contribution 3 with SHA256 hash 0xdd8dd76af5af768bda1b407943b2e478d6da6d663657a376a8db0403c6424825 (please check if this is correct)
 ```
 
 Make sure the hash that is shown is indeed the hash of the contribution you've downloaded and need to build upon (which is the hash of the contribution of the previous participant).
@@ -80,13 +80,13 @@ When the above step is done, you will see something like this:
 
 ```
 Done! Thank you for contributing as participant 4!
-Your contribution has sha256 hash 0xe9fe32323ec5192ec8c3491e883b7fec036a7b211491cd5fc3c06558b6bb0ea8
+Your contribution has SHA256 hash 0xe9fe32323ec5192ec8c3491e883b7fec036a7b211491cd5fc3c06558b6bb0ea8
 Please upload 'loopring_mpc_0004.zip'.
 Also please fill out 'attestation.txt' and sign it by running 'python3 sign_attestation.py' and send us 'signed_attestation.txt'.
 ```
 ### Step#4
 
-Document the process you used and add it to `attestation.txt` (DO NOT CREATE THIS FILE, this file will have been auto-generated and will already contain important data!), following the template here: [./attestation_template.md](./attestation_template.md)
+Document the process you used using the template available in `attestation.txt` (DO NOT CREATE THIS FILE, this file will have been auto-generated and will already contain important data!).
 
 Sign it with your keybase GPG key by running
 
