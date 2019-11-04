@@ -31,17 +31,19 @@ cargo build --release && \
 cd ../loopring
 ```
 
-Stay in this folder from this point on. `phase2-bn254/loopring` needs to be the directory you run all scripts in.
+**Stay in this folder from this point on.** `phase2-bn254/loopring` needs to be the directory you run all scripts in.
 
 ### Step#2
 
-The coordinator will give you an IPFS CID, for example `Qme4u9HfFqYUhH4i34ZFBKi1ZsW7z4MYHtLxScQGndhgKE`, to download the contribution from the previous participant. For example, if you're participant 4 you can download the output from participant 3 from inside the `phase2-bn254/loopring` directory by running the following commands:
+The coordinator will give you an IPFS CID, for example `Qme4u9HfFqYUhH4i34ZFBKi1ZsW7z4MYHtLxScQGndhgKE`, to download the contribution from the previous participant. For example, if you're participant 4 (sequence number `NNNN=0004`） you can download the output from participant 3 (sequence number is `0003`) from inside the `phase2-bn254/loopring` directory by running the following commands:
 
 ```
 ipfs get Qme4u9HfFqYUhH4i34ZFBKi1ZsW7z4MYHtLxScQGndhgKE
 ipfs cat Qme4u9HfFqYUhH4i34ZFBKi1ZsW7z4MYHtLxScQGndhgKE > loopring_mpc_0003.zip
 ```
-Note that the name of `loopring_mpc_0003.zip` must be acurate.
+Note that the name of `loopring_mpc_0003.zip` must be accurate and the sequence number must be 1 smaller than your sequence number.
+
+> If IPFS cannot find the file, please try again later. Sometimes it does take time for  files to become available to remote IPFS nodes.
 
 ### Setp#3
 
@@ -73,15 +75,14 @@ Enter some random text as prompted. You should try to provide as much entropy as
 After a short while you will see something like this:
 
 ```
-Starting from contribution 1 with sha256 hash 0xdd8dd76af5af768bda1b407943b2e478d6da6d663657a376a8db0403c6424825 (please check if this is correct)
+Starting from contribution 3 with sha256 hash 0xdd8dd76af5af768bda1b407943b2e478d6da6d663657a376a8db0403c6424825 (please check if this is correct)
 ```
 
 Make sure the hash that is shown is indeed the hash of the contribution you've downloaded and need to build upon (which is the hash of the contribution of the previous participant).
 
 The computation will run for about 24 hours on a fast machine. Please try your best to avoid electronic surveillance or tampering during this time.
 
-### Step#4
-When it is done, you will see something like this:
+When the above step is done, you will see something like this:
 
 ```
 Done! Thank you for contributing as participant 4!
@@ -90,13 +91,11 @@ Please upload 'loopring_mpc_0004.zip'.
 Also please fill out 'attestation.txt' and sign it by running 'python3 sign_attestation.py' and send us 'signed_attestation.txt'.
 ```
 
-Upload the generated `loopring_mpc_nnnn.zip` file to the server (the coordinator will send instructions on how to do this). For example, if you're participant 4 you will need to upload the file `loopring_mpc_0004.zip`.
-
-### Step#5
+### Step#4
 
 Reboot your computer.
 
-### Step#6
+### Step#5
 
 Document the process you used and add it to `attestation.txt` (DO NOT CREATE THIS FILE, this file will have been auto-generated and will already contain important data!), following the template here: [./attestation_template.md](./attestation_template.md)
 
@@ -108,18 +107,18 @@ python3 sign_attestation.py
 
 This will generate the file `signed_attestation.txt`.
 
-### Step#7
+### Step#6
 Now you will share your files with the coordinator using IPFS. 
-Now run the following commands to share your contribution results (replacing `my_name` and `NNNN`):
+Now run the following commands to share your contribution results (replacing `NNNN` with your sequence number):
 ```console
-ipfs id >> loopring_mpc_NNNN_summary.txt
-ipfs add loopring_mpc_NNNN.zip >> loopring_mpc_NNNN_summary.txt
-ipfs add signed_attestation.txt >> loopring_mpc_NNNN_summary.txt
+ipfs id >> NNNN_summary.txt
+ipfs add loopring_mpc_NNNN.zip >> NNNN_summary.txt
+ipfs add signed_attestation.txt >> NNNN_summary.txt
 ipfs daemon
 ```
-You need to share the `loopring_mpc_nnnn_summary.txt` file with the coordinator using the Keybase's chat, **while keep IPFS daemon up runing and also keep your computer from sleeping.** (It will to take the coordinator about 30 minutes to 1 hour to download all files.)
+You need to share the `NNNN_summary.txt` file with the coordinator using the Keybase's chat, **while keep IPFS daemon up runing and also keep your computer from sleeping.** (It will to take the coordinator about 30 minutes to 1 hour to download all files.)
 
-### Step#8
+### Step#7
 Wait patiently unitl the coordinator confirmed all files have been retrieved. Then you can run:
 ```console
 ipfs repo gc
