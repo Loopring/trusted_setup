@@ -111,8 +111,8 @@ Now you will share your files with the coordinator using IPFS.
 Now run the following commands to share your contribution results (replacing `NNNN` with your sequence number):
 ```console
 ipfs id >> NNNN_summary.txt
-ipfs add loopring_mpc_NNNN.zip >> NNNN_summary.txt
-ipfs add signed_attestation.txt >> NNNN_summary.txt
+ipfs add --pin loopring_mpc_NNNN.zip >> NNNN_summary.txt
+ipfs add --pin signed_attestation.txt >> NNNN_summary.txt
 ```
 You need to share the `NNNN_summary.txt` file with the coordinator using the Keybase's chat, **while keep IPFS daemon up runing and also keep your computer from sleeping.** (It will to take the coordinator about 30 minutes to 1 hour to download all files.)
 
