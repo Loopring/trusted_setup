@@ -25,7 +25,7 @@ Download the response of the latest participant from [phase 1](https://github.co
 A final contribution is needed with a [beacon](https://github.com/ZcashFoundation/powersoftau-attestations/tree/master/0088). The beacon we use is the hash of Bitcoin block #602168: `00000000000000000013a0dab9d26be0353108f6eb5a2be6ac389986296607c7`, which can be found in `phase2-bn254/powersoftau/src/bin/beacon_constrained.rs`:
 
 ```
-// Update the number of iterations: Sapling MPC did 2^42 iterations
+// Update the number of iterations: We use 2^37 iterations
 
 // Place block hash here (block number #564321)
 let mut cur_hash: [u8; 32] = hex!("0000000000000000000a558a61ddc8ee4e488d647a747fe4dcc362fe2026c620");
@@ -60,7 +60,7 @@ At any point we can use the parameters to create the verification and proving ke
 If you decide to use a certain contribution, you first have to do another contribution on top of it with [a beacon](https://lists.zfnd.org/pipermail/zapps-wg/2018/000380.html) (just like before with the phase 1 result). To do this a bitcoin hash is used at a certain block height. Publicly share the block height of the block you will use a couple of hours before the block is mined. Once the block is mined put the hash of the block in `phase2-bn254/phase2/src/bin/beacon.rs`:
 
 ```
-// Update the number of iterations: Sapling MPC did 2^42 iterations
+// Update the number of iterations: We use 2^37 iterations
 
 // Place block hash here (block number #564321)
 let mut cur_hash: [u8; 32] = hex!("0000000000000000000a558a61ddc8ee4e488d647a747fe4dcc362fe2026c620");
