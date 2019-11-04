@@ -9,6 +9,8 @@
 1. Install and config IPFS. If you do not have IPFS v0.4.22 already installed, please download it from [here](https://dist.ipfs.io/#go-ipfs), then run `ipfs init`. Now you need to config IPFS to support large files by running:
 ```console
 ipfs config --json Datastore.StorageMax '"200GB"'
+ipfs config Addresses.Gateway /ip4/0.0.0.0/tcp/9001
+ipfs config Addresses.API /ip4/0.0.0.0/tcp/5001
 ```
 
 To use IPFS in the following steps, make sure you have IPFS daemon up running:
