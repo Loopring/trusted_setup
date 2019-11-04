@@ -36,7 +36,7 @@ sftp> exit
 ```
 Note that the sequence number in `loopring_mpc_0003.zip` must 1 smaller than yours (0004)。
 
-The file is very large (tens of Gigabytes),  it will take quite some time to download. If the download is interrupted, simply repeat the above commands so it will resume downloading.
+The file is very large (tens of Gigabytes),  it will take quite some time to download. If the downloading is interrupted, simply repeat the above commands so it will resume downloading.
 
 
 ### Setp#3
@@ -105,7 +105,7 @@ sftp> reput loopring_mpc_0004.zip
 sftp> exit
 ```
 
-The file is very large (tens of Gigabytes),  it will take quite some time to upload. If the download is interrupted, simply repeat the above commands so it will resume uploading.
+The file is very large (tens of Gigabytes),  it will take quite some time to upload. If the uploading is interrupted, simply repeat the above commands so it will resume uploading.
 
 ### Step#6
 **Reboot your computer**, then notify the coordinator that your have completed your contribution.
