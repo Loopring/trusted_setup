@@ -36,7 +36,7 @@ sftp> exit
 ```
 Note that the name of `loopring_mpc_0003.zip` must be exact and the sequence number (0003) must be 1 smaller than yours (0004)。
 
-The file is very large (tens of Gigabytes),  it will take quite some time to download. If the download is interrupted, simply repeat the above commands so it will resume.
+The file is very large (tens of Gigabytes),  it will take quite some time to download. If the download is interrupted, simply repeat the above commands so it will resume downloading.
 
 
 ### Setp#3
@@ -104,6 +104,9 @@ sftp> reput signed_attestation.txt signed_attestation_0004.txt
 sftp> reput loopring_mpc_0004.zip
 sftp> exit
 ```
+
+The file is very large (tens of Gigabytes),  it will take quite some time to upload. If the download is interrupted, simply repeat the above commands so it will resume uploading.
+
 ### Step#6
 **Reboot your computer**, then notify the coordinator that your have completed your contribution.
 
