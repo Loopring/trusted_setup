@@ -11,9 +11,10 @@
 ipfs config --json Datastore.StorageMax '"200GB"'
 ```
 
-Then add additional peers [TODO]:
+To use IPFS in the following steps, make sure you have IPFS daemon up running:
+
 ```console
-ipfs bootstrap add /ip6/::1/tcp/4001/ipfs/QmPtBsF7sUprexQYoSy4GBx9opfEqgNADEAzh63XaTE667
+ipfs daemon
 ```
 
 ## When Your Turn Comes
@@ -112,7 +113,6 @@ Now run the following commands to share your contribution results (replacing `NN
 ipfs id >> NNNN_summary.txt
 ipfs add loopring_mpc_NNNN.zip >> NNNN_summary.txt
 ipfs add signed_attestation.txt >> NNNN_summary.txt
-ipfs daemon
 ```
 You need to share the `NNNN_summary.txt` file with the coordinator using the Keybase's chat, **while keep IPFS daemon up runing and also keep your computer from sleeping.** (It will to take the coordinator about 30 minutes to 1 hour to download all files.)
 
