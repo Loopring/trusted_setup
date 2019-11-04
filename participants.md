@@ -110,7 +110,7 @@ ipfs add loopring_mpc_NNNN.zip >> my_name_summary.txt
 ipfs add signed_attestation.txt >> my_name_summary.txt
 ipfs daemon
 ```
-You need to share the `my_name_summary.txt` file with the coordinator using the Keybase's chat, while keep IPFS daemon up runing and also keep your computer from sleeping. (It will to take the coordinator about **30 minutes to 1 hour** to download all files.)
+You need to share the `my_name_summary.txt` file with the coordinator using the Keybase's chat, **while keep IPFS daemon up runing and also keep your computer from sleeping.** (It will to take the coordinator about 30 minutes to 1 hour to download all files.)
 
 ### Step#8
 Wait patiently unitl the coordinator confirmed all files have been retrieved. Then you can run: `ipfs repo gc` to release disk space and delete all code and files from disk.
