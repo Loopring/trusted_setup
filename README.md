@@ -12,11 +12,10 @@ The ceremony starts with the coordinator picking a response file from the phase 
 
 The participants download these parameters, run a computation to produce new parameters, and send it to the coordinator.
 
-## Ceremony Instructions
+## Instructions for Participants
+All participants please follow [these instructions](./participants.md). Note that for all participants: **please join our Keybase team by following the instructions inside the *Get Ready Before the Participation* section BEFORE your turn comes up**.
 
-- The coordinators shall follow [these instructions](./coordinator.md).
-- All participants please follow [these instructions](./participants.md). Note that for all participants: **please join our Keybase team by following the instructions inside the *Get Ready Before the Participation* section BEFORE your turn comes up**.
+## Instructions for Coordinators
+The coordinators shall follow [these instructions](./coordinator.md).
 
-## Testing
-
-Follow [these instructions](./testing.md) to test the phase2 code.
+For testing the phase2 code, please follow [these instructions](./testing.md).
