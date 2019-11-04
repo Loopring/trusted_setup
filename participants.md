@@ -77,6 +77,10 @@ Upload the generated `loopring_mpc_nnnn.zip` file to the server (the coordinator
 
 ### Step#5
 
+Reboot your computer.
+
+### Step#6
+
 Document the process you used and add it to `attestation.txt` (DO NOT CREATE THIS FILE, this file will have been auto-generated and will already contain important data!), following the template here: https://github.com/weijiekoh/perpetualpowersoftau/tree/master/0001_weijie_response.
 
 Sign it with your keybase GPG key by running
@@ -85,9 +89,9 @@ Sign it with your keybase GPG key by running
 python3 sign_attestation.py
 ```
 
-This will generate the file `signed_attestation.txt`. Now it's time to  **reboot your computer**.
+This will generate the file `signed_attestation.txt`.
 
-### Step#6
+### Step#7
 Now you will share your files with the coordinator using IPFS. If you have IPFS already installed, please run:
 ```
 ipfs config --json Datastore.StorageMax '"200GB"'
@@ -106,10 +110,8 @@ ipfs add loopring_mpc_NNNN.zip >> my_name_summary.txt
 ipfs add signed_attestation.txt >> my_name_summary.txt
 ipfs daemon
 ```
-You need to share the `my_name_summary.txt` file with the coordinator using the Keybase's chat, while keep IPFS daemon up runing and also keep your computer from sleeping.
+You need to share the `my_name_summary.txt` file with the coordinator using the Keybase's chat, while keep IPFS daemon up runing and also keep your computer from sleeping. (It will to take the coordinator about **30 minutes to 1 hour** to download all files.)
 
-It will mostly likely to take the coordinator will 30 minutes to download all files. 
-
-### Step#7
-Wait patiently unitl the coordinator confirmed all files have been retrieved. Then you can run: `ipfs repo gc` to release disk space.
+### Step#8
+Wait patiently unitl the coordinator confirmed all files have been retrieved. Then you can run: `ipfs repo gc` to release disk space and delete all code and files from disk.
 
