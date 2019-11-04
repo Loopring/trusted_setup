@@ -6,6 +6,17 @@
 1. Make sure you have [python 3](https://www.python.org/downloads/) installed
 1. Make a [Keybase](https://keybase.io/) account and [link it to your twitter or github account](https://github.com/pstadler/keybase-gpg-github) so people can be sure it's actually you that participated. Install the [desktop software](https://keybase.io/download) which wil be used to sign the attestation.
 1. Using your Keybase software, join a team called **loopringceremony**, this is the official communication channel, but we'll also collect another IM account of yours to inform you when your trun is coming up.
+1. Install and config IPFS. If you have IPFS already installed, please run:
+```console
+ipfs config --json Datastore.StorageMax '"200GB"'
+```
+This is to make sure IPFS supports large files.
+
+Otherwise,  [download IPFS](https://dist.ipfs.io/#go-ipfs) then install it on your OS, then run:
+```console
+ipfs init
+ipfs config --json Datastore.StorageMax '"200GB"'
+```
 
 ## When Your Turn Comes
 
@@ -24,7 +35,13 @@ Stay in this folder from this point on. `phase2-bn254/loopring` needs to be the 
 
 ### Step#2
 
-Download the `loopring_mpc_nnnn.zip` file from the server to `phase2-bn254/loopring` (the coordinator will send you the link). For example, if you're participant 4 you will need to download the file `loopring_mpc_0003.zip` (i.e. the contribution of the previous participant).
+The coordinator will give you an IPFS CID, for example `Qme4u9HfFqYUhH4i34ZFBKi1ZsW7z4MYHtLxScQGndhgKE`, to download the contribution from the previous participant. For example, if you're participant 4 you can download the output from participant 3 from inside the `phase2-bn254/loopring` directory by running the following commands:
+
+```
+ipfs get Qme4u9HfFqYUhH4i34ZFBKi1ZsW7z4MYHtLxScQGndhgKE
+ipfs cat Qme4u9HfFqYUhH4i34ZFBKi1ZsW7z4MYHtLxScQGndhgKE > loopring_mpc_0003.zip
+```
+Note that the name of `loopring_mpc_0003.zip` must be acurate.
 
 ### Setp#3
 
@@ -81,7 +98,7 @@ Reboot your computer.
 
 ### Step#6
 
-Document the process you used and add it to `attestation.txt` (DO NOT CREATE THIS FILE, this file will have been auto-generated and will already contain important data!), following the template here: https://github.com/weijiekoh/perpetualpowersoftau/tree/master/0001_weijie_response.
+Document the process you used and add it to `attestation.txt` (DO NOT CREATE THIS FILE, this file will have been auto-generated and will already contain important data!), following the template here: [./attestation_template.md](./attestation_template.md)
 
 Sign it with your keybase GPG key by running
 
@@ -92,25 +109,15 @@ python3 sign_attestation.py
 This will generate the file `signed_attestation.txt`.
 
 ### Step#7
-Now you will share your files with the coordinator using IPFS. If you have IPFS already installed, please run:
-```console
-ipfs config --json Datastore.StorageMax '"200GB"'
-```
-This is to make sure IPFS supports large files.
-
-Otherwise,  [download IPFS](https://dist.ipfs.io/#go-ipfs) then install it on your OS, then run:
-```console
-ipfs init
-ipfs config --json Datastore.StorageMax '"200GB"'
-```
+Now you will share your files with the coordinator using IPFS. 
 Now run the following commands to share your contribution results (replacing `my_name` and `NNNN`):
 ```console
-ipfs id >> my_name_contribution.txt
-ipfs add loopring_mpc_NNNN.zip >> my_name_contribution.txt
-ipfs add signed_attestation.txt >> my_name_contribution.txt
+ipfs id >> loopring_mpc_NNNN_summary.txt
+ipfs add loopring_mpc_NNNN.zip >> loopring_mpc_NNNN_summary.txt
+ipfs add signed_attestation.txt >> loopring_mpc_NNNN_summary.txt
 ipfs daemon
 ```
-You need to share the `my_name_summary.txt` file with the coordinator using the Keybase's chat, **while keep IPFS daemon up runing and also keep your computer from sleeping.** (It will to take the coordinator about 30 minutes to 1 hour to download all files.)
+You need to share the `loopring_mpc_nnnn_summary.txt` file with the coordinator using the Keybase's chat, **while keep IPFS daemon up runing and also keep your computer from sleeping.** (It will to take the coordinator about 30 minutes to 1 hour to download all files.)
 
 ### Step#8
 Wait patiently unitl the coordinator confirmed all files have been retrieved. Then you can run:
