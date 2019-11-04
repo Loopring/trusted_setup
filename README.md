@@ -16,6 +16,4 @@ The participants download these parameters, run a computation to produce new par
 All participants please follow [these instructions](./participants.md). Note that for all participants: **please join our Keybase team by following the instructions inside the *Get Ready Before the Participation* section BEFORE your turn comes up**.
 
 ## Instructions for Coordinators
-The coordinators shall follow [these instructions](./coordinator.md).
-
-For testing the phase2 code, please follow [these instructions](./testing.md).
+The coordinators shall follow [these instructions](./coordinator.md); for testing the phase2 code, please see [here](./testing.md).
