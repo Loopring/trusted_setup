@@ -8,8 +8,9 @@
 1. Using your Keybase software, join a team called **loopringceremony**, this is the official communication channel, but we'll also collect another IM account of yours to inform you when your trun is coming up.
 
 
-
 ## When Your Turn Comes
+
+The coordinator will send you a `sftp.credential` file for accessing our SFTP server. He will also confirm with you your sequence number. In the instructions we assume you are the 4th participant with sequence number 0004, **please make sure you replace 0004 with your own sequence number in all commands.**
 
 ### Step#1
 
@@ -22,18 +23,20 @@ cargo build --release && \
 cd ../loopring
 ```
 
-Save the `loopringsftp` file shared by the coordinator in this directory. From now on, **stay in this folder from this point on.** `phase2-bn254/loopring` needs to be the directory you run all scripts in.
+Save the `sftp.credential` file shared by the coordinator in this directory. **Stay in this folder from this point on.** `phase2-bn254/loopring` needs to be the directory you run all scripts in.
 
 ### Step#2
 
-Download the contribution file from the previous participant:
+Download the contribution zip file from the previous participant. 
 
 ```console
-sftp -i ./loopringsftp loopring@sftp.loopring.org
+sftp -i sftp.credential loopring@sftp.loopring.org
 sftp> reget loopring_mpc_0003.zip
 sftp> exit
 ```
-Note that the name of `loopring_mpc_0003.zip` must be accurate and the sequence (0003) number must be 1 smaller than yours (0004).
+Note that the name of `loopring_mpc_0003.zip` must be exact and the sequence number (0003) must be 1 smaller than yours (0004)。
+
+The file is very large (tens of Gigabytes),  it will take quite some time to download. If the download is interrupted, simply repeat the above commands so it will resume.
 
 
 ### Setp#3
@@ -81,12 +84,7 @@ Your contribution has sha256 hash 0xe9fe32323ec5192ec8c3491e883b7fec036a7b211491
 Please upload 'loopring_mpc_0004.zip'.
 Also please fill out 'attestation.txt' and sign it by running 'python3 sign_attestation.py' and send us 'signed_attestation.txt'.
 ```
-
 ### Step#4
-
-Reboot your computer.
-
-### Step#5
 
 Document the process you used and add it to `attestation.txt` (DO NOT CREATE THIS FILE, this file will have been auto-generated and will already contain important data!), following the template here: [./attestation_template.md](./attestation_template.md)
 
@@ -98,16 +96,14 @@ python3 sign_attestation.py
 
 This will generate the file `signed_attestation.txt`.
 
-### Step#6
-Now you will share your files with the coordinator using IPFS. 
-Now run the following commands to share your contribution results (replacing `NNNN` with your sequence number):
+### Step#5
+Now run the following commands to share your contribution results:
 ```console
-```console
-sftp -i ./loopringsftp loopring@sftp.loopring.org
-sftp> reput signed_attestation.txt
+sftp -i sftp.credential loopring@sftp.loopring.org
+sftp> reput signed_attestation.txt signed_attestation_0004.txt
 sftp> reput loopring_mpc_0004.zip
 sftp> exit
 ```
-### Step#7
-You can now notify the coordinator that your have completed your contribution.
+### Step#6
+**Reboot your computer**, then notify the coordinator that your have completed your contribution.
 
