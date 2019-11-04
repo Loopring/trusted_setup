@@ -34,7 +34,7 @@ sftp -i sftp.credential loopring@sftp.loopring.org
 sftp> reget loopring_mpc_0003.zip
 sftp> exit
 ```
-Note that the name of `loopring_mpc_0003.zip` must be exact and the sequence number (0003) must be 1 smaller than yours (0004)。
+Note that the sequence number in `loopring_mpc_0003.zip` must 1 smaller than yours (0004)。
 
 The file is very large (tens of Gigabytes),  it will take quite some time to download. If the download is interrupted, simply repeat the above commands so it will resume downloading.
 
