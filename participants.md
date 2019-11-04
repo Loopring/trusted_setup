@@ -6,18 +6,8 @@
 1. Make sure you have [python 3](https://www.python.org/downloads/) installed
 1. Make a [Keybase](https://keybase.io/) account and [link it to your twitter or github account](https://github.com/pstadler/keybase-gpg-github) so people can be sure it's actually you that participated. Install the [desktop software](https://keybase.io/download) which wil be used to sign the attestation.
 1. Using your Keybase software, join a team called **loopringceremony**, this is the official communication channel, but we'll also collect another IM account of yours to inform you when your trun is coming up.
-1. Install and config IPFS. If you do not have IPFS v0.4.22 already installed, please download it from [here](https://dist.ipfs.io/#go-ipfs), then run `ipfs init`. Now you need to config IPFS to support large files by running:
-```console
-ipfs config --json Datastore.StorageMax '"200GB"'
-ipfs config Addresses.Gateway /ip4/0.0.0.0/tcp/9001
-ipfs config Addresses.API /ip4/0.0.0.0/tcp/5001
-```
 
-To use IPFS in the following steps, make sure you have IPFS daemon up running:
 
-```console
-ipfs daemon
-```
 
 ## When Your Turn Comes
 
@@ -32,19 +22,19 @@ cargo build --release && \
 cd ../loopring
 ```
 
-**Stay in this folder from this point on.** `phase2-bn254/loopring` needs to be the directory you run all scripts in.
+Save the `loopringsftp` file shared by the coordinator in this directory. From now on, **stay in this folder from this point on.** `phase2-bn254/loopring` needs to be the directory you run all scripts in.
 
 ### Step#2
 
-The coordinator will give you an IPFS CID, for example `Qme4u9HfFqYUhH4i34ZFBKi1ZsW7z4MYHtLxScQGndhgKE`, to download the contribution from the previous participant. For example, if you're participant 4 (sequence number `NNNN=0004`） you can download the output from participant 3 (sequence number is `0003`) from inside the `phase2-bn254/loopring` directory by running the following commands:
+Download the contribution file from the previous participant:
 
 ```console
-ipfs get Qme4u9HfFqYUhH4i34ZFBKi1ZsW7z4MYHtLxScQGndhgKE
-ipfs cat Qme4u9HfFqYUhH4i34ZFBKi1ZsW7z4MYHtLxScQGndhgKE > loopring_mpc_0003.zip
+sftp -i ./loopringsftp loopring@sftp.loopring.org
+sftp> reget loopring_mpc_0003.zip
+sftp> exit
 ```
-Note that the name of `loopring_mpc_0003.zip` must be accurate and the sequence number must be 1 smaller than your sequence number.
+Note that the name of `loopring_mpc_0003.zip` must be accurate and the sequence (0003) number must be 1 smaller than yours (0004).
 
-> If IPFS cannot find the file, please try again later. Sometimes it does take time for  files to become available to remote IPFS nodes.
 
 ### Setp#3
 
@@ -112,16 +102,12 @@ This will generate the file `signed_attestation.txt`.
 Now you will share your files with the coordinator using IPFS. 
 Now run the following commands to share your contribution results (replacing `NNNN` with your sequence number):
 ```console
-ipfs id >> NNNN_summary.txt
-ipfs add --pin loopring_mpc_NNNN.zip >> NNNN_summary.txt
-ipfs add --pin signed_attestation.txt >> NNNN_summary.txt
-```
-You need to share the `NNNN_summary.txt` file with the coordinator using the Keybase's chat, **while keep IPFS daemon up runing and also keep your computer from sleeping.** (It will to take the coordinator about 30 minutes to 1 hour to download all files.)
-
-### Step#7
-Wait patiently unitl the coordinator confirmed all files have been retrieved. Then you can run:
 ```console
-ipfs repo gc
+sftp -i ./loopringsftp loopring@sftp.loopring.org
+sftp> reput signed_attestation.txt
+sftp> reput loopring_mpc_0004.zip
+sftp> exit
 ```
-to release disk space and delete all code and files from disk.
+### Step#7
+You can now notify the coordinator that your have completed your contribution.
 
