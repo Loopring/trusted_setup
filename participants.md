@@ -6,7 +6,7 @@
 1. Make sure you have [python 3](https://www.python.org/downloads/) installed
 1. Make a [Keybase](https://keybase.io/) account and [link it to your twitter or github account](https://github.com/pstadler/keybase-gpg-github) so people can be sure it's actually you that participated. Install the [desktop software](https://keybase.io/download) which wil be used to sign the attestation.
 1. Using your Keybase software, join a team called **loopringceremony**, this is the official communication channel, but we'll also collect another IM account of yours to inform you when your trun is coming up.
-1. Install and config IPFS. If you do not have IPFS already installed, please download it from [here](https://dist.ipfs.io/#go-ipfs), then run `ipfs init`. Now you need to config IPFS to support large files by running:
+1. Install and config IPFS. If you do not have IPFS v0.4.22 already installed, please download it from [here](https://dist.ipfs.io/#go-ipfs), then run `ipfs init`. Now you need to config IPFS to support large files by running:
 ```console
 ipfs config --json Datastore.StorageMax '"200GB"'
 ```
