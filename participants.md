@@ -35,7 +35,7 @@ cd ../loopring
 
 The coordinator will give you an IPFS CID, for example `Qme4u9HfFqYUhH4i34ZFBKi1ZsW7z4MYHtLxScQGndhgKE`, to download the contribution from the previous participant. For example, if you're participant 4 (sequence number `NNNN=0004`） you can download the output from participant 3 (sequence number is `0003`) from inside the `phase2-bn254/loopring` directory by running the following commands:
 
-```
+```console
 ipfs get Qme4u9HfFqYUhH4i34ZFBKi1ZsW7z4MYHtLxScQGndhgKE
 ipfs cat Qme4u9HfFqYUhH4i34ZFBKi1ZsW7z4MYHtLxScQGndhgKE > loopring_mpc_0003.zip
 ```
