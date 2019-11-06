@@ -23,7 +23,12 @@ cargo build --release && \
 cd ../loopring
 ```
 
-Save the `sftp.credential` file shared by the coordinator in this directory. **Stay in this folder from this point on.** `phase2-bn254/loopring` needs to be the directory you run all scripts in.
+Save the `sftp.credential` file shared by the coordinator in this directory. and run:
+```
+chmod 600 sftp.credential
+```
+
+**Stay in this folder from this point on.** `phase2-bn254/loopring` needs to be the directory you run all scripts in.
 
 ### Step#2
 
