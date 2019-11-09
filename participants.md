@@ -6,6 +6,9 @@
 1. Make sure you have [python 3](https://www.python.org/downloads/) installed
 1. Make a [Keybase](https://keybase.io/) account and [link it to your twitter or github account](https://github.com/pstadler/keybase-gpg-github) so people can be sure it's actually you that participated. Install the [desktop software](https://keybase.io/download) which wil be used to sign the attestation.
 1. Using your Keybase software, join a team called **loopringceremony**, this is the official communication channel, but we'll also collect another IM account of yours to inform you when your trun is coming up.
+1. Make sure you have 200GB of free disk space.
+1. Make sure you have 45GB of memory (RAM + swap space). If you have, for example, 16GB of RAM, make sure you have at least 32GB of swap space. You can use `free -h` to check how much memory you have. If you need to create additional swap space on linux you can follow [this tutorial](https://linuxize.com/post/create-a-linux-swap-file/).
+1. Make sure you can download and upload a 75GB file.
 
 
 ## When Your Turn Comes
@@ -41,7 +44,7 @@ sftp> exit
 ```
 Note that the sequence number in `loopring_mpc_0003.zip` must be 1 smaller than yours (0004).
 
-The file is very large (tens of Gigabytes),  it will take quite some time to download. If the downloading is interrupted, simply repeat the above commands so it will resume downloading.
+The file is very large (~75GB), it will take quite some time to download. If the downloading is interrupted, simply repeat the above commands so it will resume downloading.
 
 
 ### Step#3
@@ -55,7 +58,7 @@ python3 contribute.py
 You will see this prompt:
 
 ```
-Contributing to NN circuits.
+Contributing to 55 circuits.
 Type some random text and press [ENTER] to provide additional entropy...
 ```
 
@@ -79,7 +82,7 @@ Starting from contribution 3 with SHA256 hash 0xdd8dd76af5af768bda1b407943b2e478
 
 Make sure the hash that is shown is indeed the hash of the contribution you've downloaded and need to build upon (which is the hash of the contribution of the previous participant).
 
-The computation will run for about 24 hours on a fast machine. Please try your best to avoid electronic surveillance or tampering during this time.
+The computation will run for about 12 hours on a fast machine. Please try your best to avoid electronic surveillance or tampering during this time.
 
 When the above step is done, you will see something like this:
 
@@ -110,7 +113,7 @@ sftp> put loopring_mpc_0004.zip
 sftp> exit
 ```
 
-The zip file is very large (tens of Gigabytes),  it will take quite some time to upload. If the uploading is interrupted, simply repeat the above commands but change `put` to `reput`
+The zip file is very large (~75GB), it will take quite some time to upload. If the uploading is interrupted, simply repeat the above commands but change `put` to `reput`
 
 ### Step#6
 **Reboot your computer**, then notify the coordinator that your have completed your contribution.
