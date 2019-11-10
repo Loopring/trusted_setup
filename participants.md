@@ -26,6 +26,12 @@ cargo build --release && \
 cd ../loopring
 ```
 
+> If you run into an error like `error: linker cc not found`
+> try to install some additional packages:
+> `sudo apt install build-essential`
+> `sudo apt install cmake`
+> `sudo apt install gcc`
+
 Save the `sftp.credential` file shared by the coordinator in this directory. and run:
 ```
 chmod 600 sftp.credential
@@ -51,6 +57,13 @@ The file is very large (~75GB), it will take quite some time to download. If the
 
 Run the computation:
 
+> If you're running the computation remotely you may want to be able to exit your terminal.
+> If that's the case you can use something like `screen`.
+> With `screen` you can create a new terminal using `screen -S <name>`,
+> exit that terminal (without killing it) with `CTRL+A` `CTRL+D`,
+> switch back to the terminal with `screen -r <name>`,
+> and list all active terminals with `screen -list`.
+
 ```console
 python3 contribute.py
 ```
@@ -74,13 +87,13 @@ Enter some random text as prompted. You should try to provide as much entropy as
 > 7. Environmental data (e.g. the weather, seismic activity, or readings from the sun)
 
 
-After a short while you will see something like this:
+After 10-15 minutes you will see something like this:
 
 ```
 Starting from contribution 3 with SHA256 hash 0xdd8dd76af5af768bda1b407943b2e478d6da6d663657a376a8db0403c6424825 (please check if this is correct)
 ```
 
-Make sure the hash that is shown is indeed the hash of the contribution you've downloaded and need to build upon (which is the hash of the contribution of the previous participant).
+Make sure the hash that is shown is indeed the hash of the contribution you've downloaded and need to build upon (which is the hash of the contribution of the previous participant, which you can see [here](https://loopring.org/#/ceremony)).
 
 The computation will run for about 12 hours on a fast machine. Please try your best to avoid electronic surveillance or tampering during this time.
 
