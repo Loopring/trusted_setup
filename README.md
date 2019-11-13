@@ -2,6 +2,8 @@
 
 We use a very similar method of contributing as in [phase 1](https://github.com/weijiekoh/perpetualpowersoftau/) of the ceremony. As long as one party in the ceremony behaves honestly and is not comprimised, the entire setup is trustworthy.
 
+To monitor our ceremony's progress, please visit https://loopring.org/#/ceremony.
+
 ## Ceremony progress
 
 Brecht Devos (email: brecht@loopring.org, keybase: brechtpd) will be the main coordinator and Daniel Wang (email: daniel@loopring.org, keybase: danielw_loopring) will be his backup.
