@@ -13,7 +13,7 @@
 
 ## When Your Turn Comes
 
-The coordinator will send you a `sftp.credential` file for accessing our SFTP server. He will also confirm with you your sequence number. In the instructions we assume you are the 4th participant with sequence number 0004, **please make sure you replace 0004 with your own sequence number in all commands.**
+Before starting, please confirm your sequence number with the coordinator. In the instructions we assume you are the 4th participant with sequence number 0004, **please make sure you replace 0004 with your own sequence number in all commands.**
 
 ### Step#1
 
@@ -32,7 +32,8 @@ cd ../loopring
 > `sudo apt install cmake`
 > `sudo apt install gcc`
 
-Save the `sftp.credential` file shared by the coordinator in this directory. and run:
+Download the `sftp.credential` file from the **loopringceremony** group on Keybase. You can find this file by going into the group chat and clicking on the folder icon in the top right corner (with tooltip text `Open folder`). Save the `sftp.credential` file in your `phase2-bn254/loopring` folder. You will need this file for accessing our SFTP server. Run
+
 ```
 chmod 600 sftp.credential
 ```
