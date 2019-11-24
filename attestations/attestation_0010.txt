@@ -1,43 +1,39 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA256
 
-Attestation to contribution <NNNN>
+Attestation to contribution <0010>
 ================================
 
-PLEASE UPDATE THIS SECTION WHERE NEEDED (EVERYTHING BETWEEN <>)
-
 **Name:**
-<Brecht Devos>
+Felix Leupold
 
 **Date:**
-<15-17 November 2019>
+22 November 2019
 
 **Location:**
-<Belgium>
+Berlin
 
 **Device:**
-<Dell XPS - 4 core i7 1.8GHz - 16GB RAM - Ubuntu 18.04 LTS>
+AWS x1e.4xlarge
 
 **Entropy sources:**
-<Key mashing, bitcoin hashes>
+/dev/urandom
 
 **Side channel defences:**
-<None>
+None
 
 **Postprocessing:**
-<
 - - I added my contribution details to `attestion.txt`
 - - I signed my contribution using `python3 sign_attestation.py`
-- - I uploaded `loopring_mpc_NNNN.zip` and `signed_attestation.txt` to the server using the `sftp` CLI tool.
-- - I rebooted my machine.
->
+- - I uploaded `loopring_mpc_0010.zip` and `signed_attestation.txt` to the server using the `sftp` CLI tool.
+- - I shut down the AWS instance
 
 **Misc notes:**
-<None>
+Used the following fully automated docker image and run script: https://github.com/fleupold/loopring_trusted_setup
 
 
 !!!Don't modify anything from this point on!!!
-- ----------------------------------------------
+- - ----------------------------------------------
 
 Starting from contribution 9 with SHA256 hash 0x07eb94fe191c3181e80111c969d517679628986ab153a19bdc8260610511ea84 (please check if this is correct)
 
@@ -269,17 +265,17 @@ Also please fill out 'attestation.txt' and sign it by running 'python3 sign_atte
 Contributing took 18537.725485801697 seconds.
 -----BEGIN PGP SIGNATURE-----
 
-wsFcBAEBCAAQBQJd2BGfCRCemfibDXVnNwAA9EUQAEsLavVfztlrJ54PbBmIPWD6
-4yZ1CwjplIMqmtIMKCuBfBxcd+Bs9E69L8f2HiQLNDmh6yGs4fG7nHxlxJxmNSVp
-9qZEGTdKdEXnetK9bVDv1Y+GEzZXU4GnHXU/vWwku+uizktlbnT4SP3Q7QX/uAtL
-7rwLlso4yiW2ipstsH7XL/7SKJQPj7rrRXeVjthu1sJd2a7ZLA+BYtp6v/0EL2Sg
-ln23KyPRzIuh7+wmxiFDGTz2mUwg7fhxi0J4zAhQ8L/Pr5bLBNom+gHFu4LVmNjK
-FSrkxGuOKy/g1/fL5IiLHB2+imx02PYcl997SGhJH/PhGRAXmp4f5cADG+S29lCz
-xXHrV+JzcGwKJ16Zf3CqRKpoSIzHwOi+w/3IyTRVhO4h+Zj9TCM8vjftfKfF1zwK
-sv2peu28/Tl0X179gMnw3RsvwM2LfaG35pfdxHm4Snc1CwLLbqHVs/rK+chydvSM
-tkNcHH27L/Jock15zLm4YUxgJz/Tz5RZKnV9vyqJhj5itXriwjaGctojDIn4N2cV
-qEcw2TIFqb71Ue0Xkc01YbvzhP+nJP/zCKe8xZkV0NUfo3ulk2NWtMbGp+yLoiNN
-YqRCJHje9r6xutONx9gtmpZohhqkxogqkwbVrvJ3S8QqF8/h2UfZaOjBpFoTKvkz
-Jl7hpV2FdsZhWGTOz4Bo
-=yWUP
+wsFcBAEBCAAQBQJd2lndCRCemfibDXVnNwAAp2gQAAegWOd/GnUDuMVvBhp5jN63
++IFPNSFcxwERcApCP/ONcbkMlQetlu0iRnNLNWFZ2EUGbDT/RBFq+3wNW4f3kGB4
+ngD2o8nPAfD9CgcjU5ZAGZxF8TKVBmcR+rWKrMxE0vD0r+Ry+NLsxJXsmRddz1Sj
+S7y6j14RfDlRVylpOYFJYXxqxQirJ0NcvErlyx1WluPMrLGkbQf5N8uK63fyQgcr
+YE9KxbS94UpQVCbQDLeTE2hDOtn17tHCueWB59po33XVsSEzgtcdhgBm9J6rv5KV
+Kh7sGAi67svaSCW5RNX3XWazpJEgCcYPFhOo1tAncjuMvCTLR6lQLwVzLWIDwcOl
+kxK48YAMW1LYqj583tIswGH73i7PWcRDANKz/myDT/BE5tD0Sf1Xb1lh26sguxbt
+Q1E6xsfihyJojOPeZPBdEkJPYpam9uHL/prPAPRq+D5W2bnvpo6O8JPVpye4i16v
+K8FogSwFb3EPX0ASiDqfc0w9Zh9r11KBkQiU4oCs0NeqDMX1T6fwaEJqmyzavk08
+EqCozPk6GNve3EWMYYcHPvMt+f89uQAOg6SOvbQWcckxLUGCoLw6mzmlxYW3Qrmu
+IctCEiF1UmzwAzFDbpAXFD6d41ZuD//SVOZSC+YxcgNQEwfge/sKmAcxKPjxa2xf
+RfnEEpxlfdWeG1bKr/yt
+=khUa
 -----END PGP SIGNATURE-----
