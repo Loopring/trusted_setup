@@ -1,0 +1,87 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Attestation to contribution 0001
+================================
+
+PLEASE UPDATE THIS SECTION WHERE NEEDED (EVERYTHING BETWEEN <>)
+
+**Name:**
+Brecht Devos
+
+**Date:**
+17 December 2020
+
+**Location:**
+Belgium
+
+**Device:**
+i5-2500k - 8GB RAM - Ubuntu 19.10
+
+**Entropy sources:**
+Key mashing
+
+**Side channel defences:**
+None
+
+**Postprocessing:**
+- - I added my contribution details to `attestion.txt`
+- - I signed my contribution using `python3 sign_attestation.py`
+- - I uploaded `loopring_mpc_0001.zip` and `signed_attestation.txt` to the server using the `sftp` CLI tool.
+- - I rebooted my machine.
+
+**Misc notes:**
+None
+
+
+!!!Don't modify anything from this point on!!!
+- ----------------------------------------------
+
+Starting from contribution 0 with SHA256 hash 0x39ad36fefb45cf1fca066549a5599109ab04160dae82e2abc70fc37801ebbd89 (please check if this is correct)
+
+Contributing to circuit 1/6...
+Contributing to params/params_all_16.params...
+Contribution hash: 0x03db938663e4e73c71a1de0479925dc076e97a1239ebc35cfee6f1afcfb3e2b47580076739538a67dadb4e8eee896b06312f3ccf099ef1e3a24112803b4c52d5
+Writing parameters to params/params_all_16.params.
+Contributing to circuit 2/6...
+Contributing to params/params_all_32.params...
+Contribution hash: 0x83a4693aa91a63886cd4d878595fe951fbc0845aa8d99583e61bbbf43f340bb17d3fd68f3d8788012cc93ebb59ef9f9d160c4495cbc1d22ee6f3299095d17fa0
+Writing parameters to params/params_all_32.params.
+Contributing to circuit 3/6...
+Contributing to params/params_all_64.params...
+Contribution hash: 0xc4053e1c779432b8423ffbe556acb92dd4ff4bce4b33062ffb1b8c70dbcef2dd88dd6c7b2d0d8b412fca5582c0b1c507c2ed15e12ba3fcc6a9fbb8913e9e0c1d
+Writing parameters to params/params_all_64.params.
+Contributing to circuit 4/6...
+Contributing to params/params_all_128.params...
+Contribution hash: 0xa6212dfee9b4e7d552ff203c754a9f768a53418b4e0105126736fb28476dad3828c08c8b725e031895fe73afc065bca3e720aca7fd59cc8173c26b8ad88145e7
+Writing parameters to params/params_all_128.params.
+Contributing to circuit 5/6...
+Contributing to params/params_all_256.params...
+Contribution hash: 0xdf4df802ab0aa74a4981574fe478453a4aaa8e3e041f8fb0334633f099ecf8c6b75ac8db32e6c96fe52e34fe534f08433a1ecb48cd66bc120dd81faf460ce070
+Writing parameters to params/params_all_256.params.
+Contributing to circuit 6/6...
+Contributing to params/params_all_384.params...
+Contribution hash: 0xbf18fcca826c09330a0dd12cad1b022f2e6da23d0f40e88e9a304c9aa14ab292e9d5e0eb2aaecc124f2164c4041b6ef3cb1852b38f57fb45194cbf595f5ae314
+Writing parameters to params/params_all_384.params.
+
+Done! Thank you for contributing as participant 1!
+Your contribution has SHA256 hash 0x5130ac4603a185059d3e6a499d137406909f04a4a71e83c827fb7f196b8bd22b
+Please upload 'loopring_mpc_0001.zip'.
+Also please fill out 'attestation.txt' and sign it by running 'python3 sign_attestation.py' and send us 'signed_attestation.txt'.
+Contributing took 20447.706112623215 seconds.
+-----BEGIN PGP SIGNATURE-----
+
+wsFcBAEBCAAQBQJf33fDCRBwEKUHPnpkzgAACS4QAINZbSo66V2B7wUGSP0+lQ46
+MQ4wDKOKw3r7nby4+WaRiuPrnE+iTJ3fyk4pxKGesAFJsTU2Za6Xz9DJt6lhBxEP
+D1oEgXneZXrd26spww+e8+I12L7rugxZfKtunuI+kNibZPIjvdUfPbGwkp+sEK71
+Mj2w880GsPQ26kYlhJ3D41v9/istA8rkGmonmpTwrhdL0nsBOTKhOJVqrgWpqZGv
+THFfjYj9cZK216Nv5q2m2Av5ryYpAovvcAsNvWnr7X30RISQvkjG5CRoSc4zY3kO
++0vLw/7Tq/fO7hnEnH3FMQof7wW18lGxvzNjba1wSHdA0KnP6xA1Yd+YKjWygy0P
+io2IopWh133CH7e6UgNPCmwBuNPFTK5suCNZjcRFnJaTkKaMOndmwqR9kAwTDcQc
+gDac5na8iQyIIPmVdX5F7Q9zz7rkYurV88+w2X7i5ldWjtArr4IHYDcYlkGjB0ni
+0UdmZJhqdEz2EMJg4sS2kb3lBATzPwP8EYS9TjMRzdkQSF0rTsMzLAKxcsDKoSjZ
+ydsgAqQcx8UyS9v+2fSAFBRXp+OpJeyDTiBRYodPKxPezOyiTsPb/ymJsKp9RHlU
+mJiutdKCgjyIzDQcESkDxUOYnEwzVme2eXIohYX+clV7R2glpAbbJK1lvKPQIEyj
++s+dJsXd4MNmP/qMyxJR
+=E+Iy
+-----END PGP SIGNATURE-----
