@@ -5,7 +5,7 @@
 
 Clone the following repo's in the same folder
 - https://github.com/Loopring/protocols (master branch)
-- https://github.com/LoopringSecondary/phase2-bn254 (loopring36 branch)
+- https://github.com/LoopringSecondary/phase2-bn254 (master branch)
 
 Go into `protocols/packages/loopring_v3` and follow the build instructions to build the circuits.
 
