@@ -4,7 +4,6 @@
 - Make sure you have [python 3](https://www.python.org/downloads/) installed
 
 Clone the following repo's in the same folder
-- https://github.com/Loopring/protocol3-circuits (master branch)
 - https://github.com/Loopring/protocols (master branch)
 - https://github.com/LoopringSecondary/phase2-bn254 (master branch)
 

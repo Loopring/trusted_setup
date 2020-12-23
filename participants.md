@@ -6,9 +6,9 @@
 1. Make sure you have [python 3](https://www.python.org/downloads/) installed
 1. Make a [Keybase](https://keybase.io/) account and [link it to your twitter or github account](https://github.com/pstadler/keybase-gpg-github) so people can be sure it's actually you that participated. Install the [desktop software](https://keybase.io/download) which wil be used to sign the attestation.
 1. Using your Keybase software, join a team called **loopringceremony**, this is the official communication channel, but we'll also collect another IM account of yours to inform you when your trun is coming up.
-1. Make sure you have 200GB of free disk space.
+1. Make sure you have 150GB of free disk space.
 1. Make sure you have 45GB of memory (RAM + swap space). If you have, for example, 16GB of RAM, make sure you have at least 32GB of swap space. You can use `free -h` to check how much memory you have. If you need to create additional swap space on linux you can follow [this tutorial](https://linuxize.com/post/create-a-linux-swap-file/).
-1. Make sure you can download and upload a 75GB file.
+1. Make sure you can download and upload a 50GB file.
 
 
 ## When Your Turn Comes
@@ -32,10 +32,10 @@ cd ../loopring
 > `sudo apt install cmake`
 > `sudo apt install gcc`
 
-Download the `sftp.credential` file from the **loopringceremony** group on Keybase. You can find this file by going into the group chat and clicking on the folder icon in the top right corner (with tooltip text `Open folder`). Save the `sftp.credential` file in your `phase2-bn254/loopring` folder. You will need this file for accessing our SFTP server. Run
+Download the `sftp-2020.credential` file from the **loopringceremony** group on Keybase. You can find this file by going into the group chat and clicking on the folder icon in the top right corner (with tooltip text `Open folder`). Save the `sftp-2020.credential` file in your `phase2-bn254/loopring` folder. You will need this file for accessing our SFTP server. Run
 
 ```
-chmod 600 sftp.credential
+chmod 600 sftp-2020.credential
 ```
 
 **Stay in this folder from this point on.** `phase2-bn254/loopring` needs to be the directory you run all scripts in.
@@ -45,7 +45,7 @@ chmod 600 sftp.credential
 Download the contribution zip file from the previous participant.
 
 ```console
-sftp -i sftp.credential loopring@sftp.loopring.org
+sftp -i sftp-2020.credential loopring@sftp.loopring.org
 sftp> reget loopring_mpc_0003.zip
 sftp> exit
 ```
@@ -121,7 +121,7 @@ This will generate the file `signed_attestation.txt`.
 ### Step#5
 Now run the following commands to share your contribution results:
 ```console
-sftp -i sftp.credential loopring@sftp.loopring.org
+sftp -i sftp-2020.credential loopring@sftp.loopring.org
 sftp> put signed_attestation.txt signed_attestation_0004.txt
 sftp> put loopring_mpc_0004.zip
 sftp> exit
