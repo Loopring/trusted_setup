@@ -7,19 +7,19 @@ Attestation to contribution <NNNN>
 PLEASE UPDATE THIS SECTION WHERE NEEDED (EVERYTHING BETWEEN <>)
 
 **Name:**
-<Brecht Devos>
+Hoss Chao
 
 **Date:**
-<15-17 November 2019>
+29 December 2020
 
 **Location:**
-<Belgium>
+Shanghai, China
 
 **Device:**
-<Dell XPS - 4 core i7 1.8GHz - 16GB RAM - Ubuntu 18.04 LTS>
+AWS m4n 4xlarge - 8 vcpu 64GHz - 16GB RAM - Ubuntu 18.04 LTS
 
 **Entropy sources:**
-<Key mashing, bitcoin hashes>
+<None>
 
 **Side channel defences:**
 <None>
@@ -73,17 +73,17 @@ Also please fill out 'attestation.txt' and sign it by running 'python3 sign_atte
 Contributing took 9980.279047727585 seconds.
 -----BEGIN PGP SIGNATURE-----
 
-wsFcBAEBCAAQBQJf61vwCRBKyPF/P6XFTgAAod0QAAjSJLhDQhArzeDTqPBuXDb8
-yyN8wpdutCOohYtEB2ClPQk8FM5KYFtGdlVGkbw2FHSGA5d+Webv9bSEwq3FabOr
-97nZCDFygf+0xxxks5m/qaHXQQf/SrV1U7Xvvo6G+RznljxOolyP3E/24faUXleW
-+ApUPu6bC394KPBMleciZm/IXnDCqQaVc9rvHAeA5GdDdNczBHrMJH1r+IIREeXK
-9HiFQeVqzyYqnoQezHep22xFweq+3rIxpNNxv9j/ZprSEN0ZoANpZ9noqsPhSTvC
-Eldryj4SX/vNudSB7ZPiomMVP5A0I+Z81O8KJwcjwMvtuzXll/PsOmjIIcj0pncE
-/LSInwBR4SzmNdthRQnETNCVhfnFTOwv5OoD8bCJTVRYfhTFyndFUSbcREiJ+A/e
-GMvZkJCPN/YdbJmGqpi8Bv+fGWXo8F+pT9oV9y2EFEk2jK8P5DO/G9KeIgzi7rew
-rTazSsrOYDwcyy81orwKL8ttCJcvXDAsgNrUreKTRbmP5xuSnS8esDgc7Dmv729J
-ZvRvLswjC1lupZ5YGPDx9/nVA6pvvbFMKrMUg5qaZSmgiArF+oE4Bf2Nntj4zu3q
-Vmp9mLiaJE3/Oo7rZjnvF5rK2JRc1jBxqJ9U5tQtA8n0GC2B9sW72IfmVyiBAkXI
-LhSgToXCQ3kEXF33K35C
-=gS5n
+wsFcBAEBCAAQBQJf7DFrCRBKyPF/P6XFTgAAxg8QAH7wctVNPuzxn/cqzDEZFchl
+lwI4n5tdIY4gh2lAoDJzHJ4nF4BCEfzZ4Y4wu+8s16lqTcFYCcen/sGqlNoc1DLc
+U9MpwIHlzX1eQkP+qQZEjgVNOo66HecQDTcP9Vcy+w3X31bkwtNl4ZiiAUeToIGC
+m0yX44tLMDJsoUqpRBIic649u9BiRgATBbFWjYN2aret13YI5myrQ2ZTBwtEFWzg
+a2PMkjKb8uDfjlB/HT90om0rrvGieHQP0uD2Yv83D2ANL1nUl48s4MtnkK/mvPo/
+HwXw056Oc536aFzYr9wjY21XDCmmta2DfAd1LJVoF1LZIwOapLVGa9pfKQT10o6h
+NIWGqUlHabzPcNaFvb57rP9zAuSkAES56my092uJ4exh2GOPoPprOfY95jx8bt5a
+ts3I1uwk1b0NHSXLStBdn/tlfmGIRwKhjhs/hi/hmXFfT4v719xPfhDYWaTXL/MC
+ITipEC9rqE2XnfWvJjWypY2Fp4RdmWpMjrrc17gHZm3IUToGAPIFk8jpfJJMlvWv
+gt/MZLPFSCPLdQehThHlGhRGy7bubv593ud7MrK5eZ+RnlxKdvbNEhnrU9GAKyVf
+jW6HNXrnW1CKf78xWs/UV/SsFZXbCTdYY9DEHUweqO38WgGhBV4q2XqLhWxGQhFR
+XFCxmwFGy4s80sbfT3sd
+=+gTD
 -----END PGP SIGNATURE-----
