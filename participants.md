@@ -46,6 +46,7 @@ Download the contribution zip file from the previous participant.
 
 ```console
 sftp -i sftp-2020.credential loopring@sftp.loopring.org
+sftp> cd 3.6.1
 sftp> reget loopring_mpc_0003.zip
 sftp> exit
 ```
@@ -122,6 +123,7 @@ This will generate the file `signed_attestation.txt`.
 Now run the following commands to share your contribution results:
 ```console
 sftp -i sftp-2020.credential loopring@sftp.loopring.org
+sftp> cd 3.6.1
 sftp> put signed_attestation.txt signed_attestation_0004.txt
 sftp> put loopring_mpc_0004.zip
 sftp> exit
