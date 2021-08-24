@@ -4,7 +4,7 @@
 - Make sure you have [python 3](https://www.python.org/downloads/) installed
 
 Clone the following repo's in the same folder
-- https://github.com/Loopring/protocols (master branch)
+- https://github.com/Loopring/protocols (release_loopring_3.6.2 branch)
 - https://github.com/LoopringSecondary/phase2-bn254 (master branch)
 
 Go into `protocols/packages/loopring_v3` and follow the build instructions to build the circuits.

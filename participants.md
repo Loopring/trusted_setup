@@ -6,7 +6,7 @@
 1. Make sure you have [python 3](https://www.python.org/downloads/) installed
 1. Make a [Keybase](https://keybase.io/) account and [link it to your twitter or github account](https://github.com/pstadler/keybase-gpg-github) so people can be sure it's actually you that participated. Install the [desktop software](https://keybase.io/download) which wil be used to sign the attestation.
 1. Using your Keybase software, join a team called **loopringceremony**, this is the official communication channel, but we'll also collect another IM account of yours to inform you when your trun is coming up.
-1. Make sure you have 150GB of free disk space.
+1. Make sure you have 200GB of free disk space.
 1. Make sure you have 45GB of memory (RAM + swap space). If you have, for example, 16GB of RAM, make sure you have at least 32GB of swap space. You can use `free -h` to check how much memory you have. If you need to create additional swap space on linux you can follow [this tutorial](https://linuxize.com/post/create-a-linux-swap-file/).
 1. Make sure you can download and upload a 50GB file.
 
