@@ -1,0 +1,87 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Attestation to contribution 0002
+================================
+
+PLEASE UPDATE THIS SECTION WHERE NEEDED (EVERYTHING BETWEEN <>)
+
+**Name:**
+David Nicholson
+
+**Date:**
+26 August 2021
+
+**Location:**
+Washington, USA
+
+**Device:**
+MacBook Pro - 6 core i& 2.6GHz - 16GB RAM - macOS Big Sur 11.4
+
+**Entropy sources:**
+Bitcoin hashes
+
+**Side channel defences:**
+None
+
+**Postprocessing:**
+- - I added my contribution details to `attestion.txt`
+- - I signed my contribution using `python3 sign_attestation.py`
+- - I uploaded `loopring_mpc_0002.zip` and `signed_attestation.txt` to the server using the `sftp` CLI tool.
+- - I rebooted my machine.
+
+**Misc notes:**
+None
+
+
+!!!Don't modify anything from this point on!!!
+- ----------------------------------------------
+
+Starting from contribution 1 with SHA256 hash 0x2dbe4e2d86ebcaefc6cd1cf31ea673ba6d8e6586b8cb42f98220ea855dee9595 (please check if this is correct)
+
+Contributing to circuit 1/6...
+Contributing to params/params_all_16.params...
+Contribution hash: 0xcb0e1ba93f77fbf0038fca79acf7c12fe8a1a1ed83208c000ece1941b79ce2fa212bc1bfc104ac858a24f99aefdfa4cca6df6e903f3689c16bbba069e71d968f
+Writing parameters to params/params_all_16.params.
+Contributing to circuit 2/6...
+Contributing to params/params_all_32.params...
+Contribution hash: 0x29f140bb161a86a2c181a6f8b2832a7054c418b97a5ce2ff25a172bbeb6ee0d0198f7a354b1e3ec4d511372058bf0cb335a3aec3a73c8dac503bca796bbe74f2
+Writing parameters to params/params_all_32.params.
+Contributing to circuit 3/6...
+Contributing to params/params_all_64.params...
+Contribution hash: 0xe54db270b10cdd4277c32b7a1da3e7cdac1bd049117313f38827cc6d28b52812d94ee3f4eae24935f8342d854a4959c5d4301d70afa8445addfb9c65c6d305a0
+Writing parameters to params/params_all_64.params.
+Contributing to circuit 4/6...
+Contributing to params/params_all_128.params...
+Contribution hash: 0x529489d05e7baffb64452b4cbe12a979d3b09ef2cb1fccd2b2faa3cf5d99b37ddd8711cef6d1133bfa8e88533e2db5d2574f89fd9db74f383df8118dd6323a4e
+Writing parameters to params/params_all_128.params.
+Contributing to circuit 5/6...
+Contributing to params/params_all_256.params...
+Contribution hash: 0x9143aa14ff6e84a35a04a89e2a21371e8db6ac387ddeaae663464a28fc33dee95d47ba968dce49f35c7072a4de78684f7990d1ae027d680247eeace8531a5bb4
+Writing parameters to params/params_all_256.params.
+Contributing to circuit 6/6...
+Contributing to params/params_all_384.params...
+Contribution hash: 0xc7fb6a37b5ba500adffa9d76646f64abae142eb661b6c4519b2630d6af00f71328ebe10c8c321f05ec3004c7f3778e34de17224b77215a88d2ed7d7ecedb4eeb
+Writing parameters to params/params_all_384.params.
+
+Done! Thank you for contributing as participant 2!
+Your contribution has SHA256 hash 0x3b0fe3e1427a41d60e917feaca6528ecba4ecd637c322d370d015c72270dd54c
+Please upload 'loopring_mpc_0002.zip'.
+Also please fill out 'attestation.txt' and sign it by running 'python3 sign_attestation.py' and send us 'signed_attestation.txt'.
+Contributing took 13677.834399938583 seconds.
+-----BEGIN PGP SIGNATURE-----
+
+wsFcBAEBCAAQBQJhJ/xSCRAtdUS1mUYZVAAARO4QAMR3L6f3Wpw9LBadilzyUWvp
+mE5L5RRZJpW4PXoScX5pAVwO/bl7po2SdZXqEm6TaUWaJFDVrDwHi8nWfiEjbWsn
+F1WJez8qfl7N0LGFdeijUR+JbEat00UxGphWvfe6FqFe+FRngtMN7cVUeTMwuIZf
+Lkbndi24ErIqSqCSCCteJe+1ehHToXl5GPmREd0o4DsjYJN720pjqYKbFmuIhB15
+yUB5ALQHWs7hMnPqm0uiukK5e7y65WiMZBZtvh49MiNB9LUMwvm4UueHse2gs7Ee
+Ios1q4PxHCQGtGGMN2j4jxBKBi3bwxwSE8iCurgrRUCYvMpFy0tWgiSbSMnId+nT
+TbnZ5NEPCJojF7uQvLbEG1sfw6qOG1icD7E80yLIp/JuU9eE0FFOff0j8BZTBgCa
+TOZxUcyujlI+hQGzA9OWTK8bgKQUo0xHgQZSYjfVkY6Qtw7ATgrWuhkdsgp9ztbo
++A1WwW0xDZfP+lOHjcCMEMSPbWiKX23xJ9LHVniquTP/SJB8IxlDVbOVsAnJVpgE
+Rt1Tg5aW913FlQwT38aZHy3WOFNiYkGhwHNGxKg37RMTtxRKCDl7Yk0g0k/QFmV+
+KNw7H3VCrK3N3hmo7wY7/V3iU3VkhnmtggGuuid3QAdN4N8Dp+BF0RNowjUGaIvM
+68hbCEZtfDy/BBFv0nWS
+=6Mnc
+-----END PGP SIGNATURE-----
